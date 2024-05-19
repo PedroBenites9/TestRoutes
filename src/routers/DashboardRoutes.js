@@ -6,21 +6,21 @@ import MarvelScreen from '../components/marvel/MarvelScreen'
 import HeroesScreen from '../components/heroes/HeroesScreen'
 import DcScreen from '../components/dc/DcScreen'
 
-const DashBoardRoutes = () => {
+const DashboardRoutes = () => {
     return (
         <>
             <Navbar />
+
             <div>
                 <Routes>|
-                    <Route exact path='/marvel' element={MarvelScreen} />|
-                    <Route exact path='/heroe/:heroId' element={HeroesScreen} />|
-                    <Route exact path='/dc' element={DcScreen} />|
+                    <Route exact path='/marvel' Component={MarvelScreen} />|
+                    <Route exact path='/heroe/:heroId' Component={HeroesScreen} />|
+                    <Route exact path='/dc' Component={DcScreen} />|
 
-                    <Route path='*' element={<Navigate to='/marvel' />} />
                 </Routes>
             </div>
         </>
     )
 }
 
-export default DashBoardRoutes
+export default DashboardRoutes

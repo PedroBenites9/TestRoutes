@@ -5,17 +5,15 @@ import {
     Routes,
 } from "react-router-dom";
 
-import { Navbar } from '../components/ui/Navbar'
 import LoginScreen from '../components/login/LoginScreen'
 import DashboardRoutes from './DashboardRoutes';
 const AppRouter = () => {
     return (
         <Router>
             <div>
-                <Navbar />
                 <Routes>
                     <Route exact path='/login' Component={LoginScreen} />
-                    <Route path='/' Component={DashboardRoutes} />
+                    <Route path='*' Component={DashboardRoutes} />
                 </Routes>
             </div>
         </Router>
